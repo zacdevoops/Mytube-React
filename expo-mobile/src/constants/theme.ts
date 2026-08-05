@@ -55,11 +55,13 @@ export const FontSize = {
   xs: 10,
   /** 11px — metadata */
   sm: 11,
+  /** 12px — Tailwind text-xs (Video/Audio section labels) */
+  caption: 12,
   /** 13px — recommended titles */
   md: 13,
   /** 14px — tabs, featured title, section heading */
   base: 14,
-  /** 16px — logo wordmark */
+  /** 16px — logo wordmark / player title */
   lg: 16,
 } as const;
 
@@ -176,6 +178,35 @@ export const IconSize = {
   cardMore: 16,
   featuredPlay: 14,
   logoPlay: 11,
+  /** Player overlay Cast / Maximize / More */
+  playerOverlay: 18,
+  /** Player center play glyph */
+  playerPlay: 22,
+  /** Action-chip icons */
+  action: 16,
+  /** Download panel heading icon */
+  download: 15,
+  /** Format-row glyph */
+  format: 12,
+  /** Video/Audio accordion chevron */
+  accordion: 14,
+} as const;
+
+export const PlayerLayout = {
+  /** aspect-video */
+  aspectRatio: 16 / 9,
+  /** overlay p-3 */
+  overlayPadding: 12,
+  /** center Play FAB h-14 w-14 */
+  playFab: 56,
+  /** progress track h-1.5 */
+  progressTrack: 6,
+  /** avatar h-9 w-9 */
+  avatar: 36,
+  /** action chip min-w-16 */
+  actionMinWidth: 64,
+  /** format icon box h-6 w-6 */
+  formatIconBox: 24,
 } as const;
 
 export const Gradient = {

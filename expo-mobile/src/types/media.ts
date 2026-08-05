@@ -8,4 +8,11 @@ export type Media = {
   duration: string;
   thumb: ImageSourcePropType;
   live?: boolean;
+  channelInitials: string;
+  subscribers: string;
+  description: string;
+  detailMeta: string;
+  hashtag?: string;
+  /** Optional override; otherwise the shared sample playback URL is used. */
+  playbackUrl?: string;
 };
