@@ -34,7 +34,7 @@ export function Logo({ size = 18 }: Props) {
         />
       </LinearGradient>
       <Text style={styles.wordmark} numberOfLines={1}>
-        Mytube
+        StreamVault
       </Text>
     </View>
   );
@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.semiBold,
     fontSize: FontSize.lg,
     color: Colors.foreground,
-    letterSpacing: -0.25,
+    letterSpacing: -0.4,
+    flexShrink: 1,
   },
 });

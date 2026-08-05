@@ -1,4 +1,4 @@
-import { type Href, useRouter } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { Menu, MoreVertical, Search } from 'lucide-react-native';
 import { useState } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
@@ -21,6 +21,10 @@ import { categoryTabs, featured, recommended, type CategoryTab as CategoryName }
 export default function HomeScreen() {
   const router = useRouter();
   const [tab, setTab] = useState<CategoryName>('Trending');
+
+  const openPlayer = (id: string) => {
+    router.push({ pathname: '/player/[id]', params: { id } });
+  };
 
   return (
     <Screen>
@@ -50,10 +54,7 @@ export default function HomeScreen() {
         ))}
       </ScrollView>
 
-      <FeaturedCard
-        media={featured}
-        onPress={() => router.push(`/player/${featured.id}` as Href)}
-      />
+      <FeaturedCard media={featured} onPress={() => openPlayer(featured.id)} />
 
       <Text style={styles.sectionTitle}>Recommended</Text>
       <View style={styles.list}>
@@ -61,7 +62,7 @@ export default function HomeScreen() {
           <MediaCard
             key={item.id}
             media={item}
-            onPress={() => router.push(`/player/${item.id}` as Href)}
+            onPress={() => openPlayer(item.id)}
           />
         ))}
       </View>

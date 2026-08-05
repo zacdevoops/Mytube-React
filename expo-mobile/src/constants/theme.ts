@@ -1,5 +1,6 @@
 /**
- * Mytube design tokens — ported from Lovable `src/styles.css` (dark theme).
+ * StreamVault Expo design-reference tokens — ported from Lovable `src/styles.css` (dark theme).
+ * Visual prototype only; not the official Flutter StreamVault implementation.
  * Radii resolve from `--radius: 1rem` (16px) via the declared calc() formulas.
  */
 
@@ -108,7 +109,7 @@ export const Spacing = {
   six: 64,
 } as const;
 
-/** Leftover Expo starter compatibility (unused by Mytube Home). */
+/** Leftover Expo starter compatibility (unused by StreamVault Home). */
 export const Fonts = Platform.select({
   ios: {
     sans: 'system-ui',
