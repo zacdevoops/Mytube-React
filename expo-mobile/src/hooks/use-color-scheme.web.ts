@@ -8,6 +8,8 @@ export function useColorScheme() {
   const [hasHydrated, setHasHydrated] = useState(false);
 
   useEffect(() => {
+    // Expo starter hydration gate for static web rendering.
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- required for SSR hydration
     setHasHydrated(true);
   }, []);
 
