@@ -1,15 +1,14 @@
 import { NativeTabs } from 'expo-router/unstable-native-tabs';
-import { useColorScheme } from 'react-native';
 
-import { Colors } from '@/constants/theme';
+import { Colors, ThemeSchemes } from '@/constants/theme';
 
+/** Leftover Expo starter tab shell — unused by Mytube Phase 1 routes. */
 export default function AppTabs() {
-  const scheme = useColorScheme();
-  const colors = Colors[scheme === 'unspecified' ? 'light' : scheme];
+  const colors = ThemeSchemes.dark;
 
   return (
     <NativeTabs
-      backgroundColor={colors.background}
+      backgroundColor={Colors.background}
       indicatorColor={colors.backgroundElement}
       labelStyle={{ selected: { color: colors.text } }}>
       <NativeTabs.Trigger name="index">
